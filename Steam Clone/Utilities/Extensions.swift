@@ -8,6 +8,9 @@
 
 import UIKit
 
+let tabBarColor = UIColor(red:0.06, green:0.07, blue:0.09, alpha:1.00)
+public let steamBlue = UIColor(red:0.09, green:0.10, blue:0.13, alpha:1.00)
+
 extension UIView {
     func addAnchors(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
         

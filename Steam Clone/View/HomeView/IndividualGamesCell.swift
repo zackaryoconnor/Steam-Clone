@@ -15,7 +15,7 @@ class IndividualGamesCell: UICollectionViewCell {
     }
     
     func setupView() {
-        backgroundColor = .green
+        backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {

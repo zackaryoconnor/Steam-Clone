@@ -12,8 +12,25 @@ private let individualGamesReuseIdentifier = "Cell"
 
 class HomeCell: UICollectionViewCell {
     
-    let categoryLabel = basicLabel
-    let gamesCollectionView = basicHorizontalCollectionView
+    let categoryLabel: UILabel = {
+        let basicLabel = UILabel()
+            let label = UILabel()
+            label.textColor = .white
+            label.text = "NEW ON STEAM"
+            return label
+        }()
+        
+    let gamesCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
+        
+        return collectionView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,11 +43,10 @@ class HomeCell: UICollectionViewCell {
     }
     
     func setupView() {
-        backgroundColor = .red
+        backgroundColor = .clear
         
         [categoryLabel, gamesCollectionView].forEach { addSubview($0) }
         
-        categoryLabel.text = "NEW ON STEAM"
         categoryLabel.addAnchors(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 32, left: 16, bottom: 0, right: 0))
         
         gamesCollectionView.addAnchors(top: categoryLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 0, bottom: 8, right: 0))

@@ -9,6 +9,7 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+private let homeHeaderReuseIdentifier = "HeaderCell"
 
 class HomeController: UICollectionViewController {
 
@@ -17,8 +18,10 @@ class HomeController: UICollectionViewController {
         
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
-        self.collectionView?.backgroundColor = .blue
+        self.collectionView?.backgroundColor = steamBlue
         self.collectionView?.register(HomeCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.register(HomeHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: homeHeaderReuseIdentifier)
+        
         setupNavBar()
     }
     
@@ -42,7 +45,7 @@ class HomeController: UICollectionViewController {
 
 extension HomeController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,5 +69,14 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// Header Cell
+extension HomeController {
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: homeHeaderReuseIdentifier, for: indexPath) as? HomeHeaderCell
+        return cell!
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 250)
+    }
 }
