@@ -18,6 +18,10 @@
 		F351D36A21902B3C007AE249 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F351D36921902B3C007AE249 /* TabBarController.swift */; };
 		F37178792198C56E007163DC /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37178782198C56E007163DC /* SearchController.swift */; };
 		F371787C2198C716007163DC /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371787B2198C716007163DC /* SearchCell.swift */; };
+		F371787E2198CC1F007163DC /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371787D2198CC1F007163DC /* ProfileController.swift */; };
+		F37178812198CE5F007163DC /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37178802198CE5F007163DC /* ProfileCell.swift */; };
+		F37178832198E842007163DC /* OwnedGamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37178822198E842007163DC /* OwnedGamesCell.swift */; };
+		F37178852198E8E5007163DC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37178842198E8E5007163DC /* ProfileHeaderCell.swift */; };
 		F3DE86E121910A1A009CFE72 /* IndividualGamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DE86E021910A1A009CFE72 /* IndividualGamesCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		F351D36921902B3C007AE249 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F37178782198C56E007163DC /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		F371787B2198C716007163DC /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		F371787D2198CC1F007163DC /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		F37178802198CE5F007163DC /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		F37178822198E842007163DC /* OwnedGamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedGamesCell.swift; sourceTree = "<group>"; };
+		F37178842198E8E5007163DC /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
 		F3DE86E021910A1A009CFE72 /* IndividualGamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualGamesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +94,7 @@
 				F351D36921902B3C007AE249 /* TabBarController.swift */,
 				F351D34E218C2F73007AE249 /* HomeController.swift */,
 				F37178782198C56E007163DC /* SearchController.swift */,
+				F371787D2198CC1F007163DC /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 			children = (
 				F351D362218F6FFD007AE249 /* HomeView */,
 				F371787A2198C6E2007163DC /* SearchView */,
+				F371787F2198CE3C007163DC /* ProfileView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +149,16 @@
 				F371787B2198C716007163DC /* SearchCell.swift */,
 			);
 			path = SearchView;
+			sourceTree = "<group>";
+		};
+		F371787F2198CE3C007163DC /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				F37178802198CE5F007163DC /* ProfileCell.swift */,
+				F37178842198E8E5007163DC /* ProfileHeaderCell.swift */,
+				F37178822198E842007163DC /* OwnedGamesCell.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,12 +233,16 @@
 			files = (
 				F351D34F218C2F73007AE249 /* HomeController.swift in Sources */,
 				F371787C2198C716007163DC /* SearchCell.swift in Sources */,
+				F37178852198E8E5007163DC /* ProfileHeaderCell.swift in Sources */,
 				F3236D372197B0A4005D8BBB /* HomeHeaderCell.swift in Sources */,
+				F37178832198E842007163DC /* OwnedGamesCell.swift in Sources */,
 				F3236D392197B153005D8BBB /* IndividualGamesHeaderCell.swift in Sources */,
 				F351D364218F701E007AE249 /* HomeCell.swift in Sources */,
 				F351D34D218C2F73007AE249 /* AppDelegate.swift in Sources */,
 				F351D36A21902B3C007AE249 /* TabBarController.swift in Sources */,
+				F371787E2198CC1F007163DC /* ProfileController.swift in Sources */,
 				F351D366218F7044007AE249 /* Extensions.swift in Sources */,
+				F37178812198CE5F007163DC /* ProfileCell.swift in Sources */,
 				F37178792198C56E007163DC /* SearchController.swift in Sources */,
 				F3DE86E121910A1A009CFE72 /* IndividualGamesCell.swift in Sources */,
 			);

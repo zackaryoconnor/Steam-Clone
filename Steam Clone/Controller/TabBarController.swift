@@ -34,6 +34,11 @@ class TabBarController: UITabBarController {
         searchController.tabBarItem.selectedImage = UIImage(named: "search-selected-icon")
         searchController.title = "Search"
         
-        viewControllers = [homeController, searchController]
+        let profileController = NavBarController(rootViewController: ProfileController(collectionViewLayout: layout))
+        profileController.tabBarItem.image = UIImage(named: "profile-icon")
+        profileController.tabBarItem.selectedImage = UIImage(named: "profile-selected-image")
+        profileController.title = "Profile"
+        
+        viewControllers = [homeController, searchController, profileController]
     }
 }
