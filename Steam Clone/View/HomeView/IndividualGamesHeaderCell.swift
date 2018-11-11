@@ -12,8 +12,8 @@ class IndividualGamesHeaderCell: UICollectionViewCell {
     let gameImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .white
-//        imageView.image = UIImage(named: "left-4-dead-2")
-//        imageView.layer.cornerRadius = 16
+        imageView.image = UIImage(named: "left-4-dead-2")
+        imageView.layer.cornerRadius = 16
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         return imageView
